@@ -7,6 +7,7 @@ from pykinect_azure.k4arecord import _k4arecord
 from pykinect_azure.k4arecord.playback import Playback
 from pykinect_azure.utils import get_k4a_module_path, get_k4abt_module_path, get_k4arecord_module_path
 
+#라이브러리 초기화
 def initialize_libraries(module_k4a_path=None, module_k4abt_path=None, track_body=False):
     
     # Search the module path for k4a if not available
@@ -45,6 +46,8 @@ def init_k4abt(module_k4abt_path):
 def init_k4arecord(module_k4arecord_path):
 
     _k4arecord.setup_library(module_k4arecord_path)
+
+#############################################
 
 def start_device(device_index=0, config=default_configuration, record=False, record_filepath="output.mkv"):
     
